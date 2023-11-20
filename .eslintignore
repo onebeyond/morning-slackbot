@@ -3,3 +3,4 @@ public/*
 serviceWorker.ts
 vite.config.ts
 README.md
+commitlint.config.js
