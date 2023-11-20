@@ -1,0 +1,5 @@
+node_modules
+public/*
+serviceWorker.ts
+vite.config.ts
+README.md
