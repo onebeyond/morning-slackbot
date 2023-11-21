@@ -1,0 +1,1 @@
+export { getWeatherByCity } from './cities';
