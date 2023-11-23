@@ -2,8 +2,8 @@ import { App } from '@slack/bolt';
 
 import './utils/env';
 import { getWeatherByCity } from './api';
-import { Cities } from './constants/Cities';
-import { weatherMapper } from './utils/weatherMapper';
+import { Cities } from './constants';
+import { weatherMapper, convertToCityCode } from './utils';
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -23,11 +23,12 @@ app.command('/weather', async ({ command, ack, respond }) => {
     });
   } else {
     const rawWeather = await getWeatherByCity(command.text);
-    const cityWeather = weatherMapper(rawWeather, rawWeather?.location?.name);
+    const cityCode = convertToCityCode(rawWeather.location.name);
+    const cityWeather = weatherMapper(rawWeather, cityCode);
     console.log(cityWeather);
   }
 
-  await respond(`${command.text}`);
+  await respond(`${command.text}` || 'All cities');
 });
 
 (async () => {
