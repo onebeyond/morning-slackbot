@@ -1,6 +1,6 @@
 export const Cities = [
   { code: 'albacete', name: 'Albacete Spain' },
-  { code: 'alcala', name: 'Alcala de Henares Spain' },
+  { code: 'alcaladehenares', name: 'Alcala de Henares Spain' },
   { code: 'alicante', name: 'Alicante Spain' },
   { code: 'algeciras', name: 'Algeciras Spain' },
   { code: 'avila', name: 'Avila Spain' },

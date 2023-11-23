@@ -1,6 +1,8 @@
-export const CityEmojis = {
+import { ICityEmojis } from '../models';
+
+export const CityEmojis: ICityEmojis = {
   albacete: [':inigo-party:', ' :inigod:', ':inigo_hot:', ':iñigru:', ':bilbao:'],
-  alcala: [':andrea-sun-queen:', ':andrea_brasero:', ':andrea_calvo:', ':andrea_tactica:'],
+  alcaladehenares: [':andrea-sun-queen:', ':andrea_brasero:', ':andrea_calvo:', ':andrea_tactica:'],
   alicante: [':ale-bounce:', ':ale-head:', ':ale-mrclean:', ':ale-pray:', ':ale_dreamer:'],
   algeciras: [':franky-batin:', ':franky-dranky:', ':franky-jungle:', ':franky-sinatra:', ':frankycheers:'],
   avila: [
